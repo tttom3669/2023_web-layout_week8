@@ -1,0 +1,16 @@
+@each $key,$value in $cus-font-family{
+    .font-#{$key}{
+        font-family: $value !important;
+    }
+}
+
+@each $key,$value in $spec-colors{
+    .bg-#{$key}{
+        background-image: $value;
+    }
+}
+@each $value in $cus-spacers{
+    .mt-#{$value}{
+        margin-top: $value;
+    }
+}

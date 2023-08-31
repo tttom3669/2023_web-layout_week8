@@ -1,0 +1,15 @@
+$cus-font-family: (
+  'noto-sans-tc': ('Noto Sans TC',sans-serif),
+  'shrikhand': ('Shrikhand', cursive),
+  'saira-condensed': ('Saira Extra Condensed',sans-serif),
+);
+
+$spec-colors: (
+  spec-linear-priToSec: linear-gradient(180deg, #7000FF 0%, #11002D 100%),
+  spec-radial:
+    radial-gradient(50% 50% at 50% 50%, #28085c 0%, rgba(0, 0, 0, 0) 100%),
+);
+
+$cus-spacers:(
+   1px,
+);

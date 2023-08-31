@@ -1,4 +1,6 @@
-.header{
-  background: #69F0AE;
-  font-size: 64px;
+.navbar-toggler{
+  &:focus{
+    outline: none;
+    box-shadow:none;
+  }
 }
