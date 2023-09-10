@@ -1,3 +1,187 @@
-.index-title {
-  font-size: 100px;
+.index-circle {
+  width: 196px;
+  height: 196px;
+  position: absolute;
+  top: 160px;
+  @include lg{
+    top: 136px;
+  }
+  left: 50%;
+  transform: translateX(-50%);
+  animation: circle-rotate;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes circle-rotate {
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  50% {
+    transform:translateX(-50%)  rotate(180deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+.home-bg {
+  height: auto;
+  @include lg{
+    height: calc(100vh - $cus-header-height);
+  }
+}
+
+.mySwiper_news {
+  max-width: 100%;
+  height: 50%;
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    // background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide {
+    width: 100%;
+    height: 100%;
+  }
+  .slide-img {
+    width: 67.5%;
+    background-position: center;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    &::after {
+      content: '';
+    }
+  }
+  .swiper-button-next {
+    right: 0;
+  }
+  .swiper-button-prev {
+    left: 0;
+  }
+}
+
+.new-content {
+  max-width: 950px;
+}
+
+.mySwiper_comment {
+  width: 100%;
+  height: 464px;
+  top: 40%;
+  padding-bottom: 48px;
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    width: 416px !important;
+    height: 416px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:nth-child(even) {
+      background-color: #fff;
+      color: black;
+    }
+    &:nth-child(odd) {
+      background-color: $primary-500;
+    }
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .swiper-scrollbar {
+    width: 50%;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    .swiper-scrollbar-drag {
+      background-color: #fff;
+    }
+  }
+}
+
+.cus-formBtn-width {
+  width: 100%;
+
+  @include md {
+    width: 416px;
+  }
+}
+
+.hover-Diane,
+.hover-Felix,
+.hover-Karina,
+.hover-Vito {
+  transition: all ease 0.5s;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  .card-index {
+    height: 192px;
+    width: 90px;
+    @include lg {
+      height: 600px;
+      width: 29px;
+    }
+  }
+  .card-shadow {
+    background-color: #00000080;
+    @include lg {
+      background-color: #000;
+    }
+    transition: 0.5s;
+  }
+  // .card-arrow{
+  //   width: 100%;
+  //   @include lg{
+  //     width:auto ;
+  //   }
+  // }
+}
+
+.hover-Diane {
+  background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week8-ai/diane.png?raw=true');
+  &:hover {
+    .card-shadow {
+      background-color: #00000080;
+    }
+  }
+}
+
+.hover-Felix {
+  background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week8-ai/felix.png?raw=true');
+  &:hover {
+    .card-shadow {
+      background-color: #00000080;
+    }
+  }
+}
+.hover-Karina {
+  background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week8-ai/karina.png?raw=true');
+  &:hover {
+    .card-shadow {
+      background-color: #00000080;
+    }
+  }
+}
+.hover-Vito {
+  background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week8-ai/vito.png?raw=true');
+  &:hover {
+    .card-shadow {
+      background-color: #00000080;
+    }
+  }
 }

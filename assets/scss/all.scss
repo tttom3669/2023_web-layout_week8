@@ -1,6 +1,9 @@
 // google font settings
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Saira+Extra+Condensed:wght@300&family=Shrikhand&display=swap');
 
+// swiper
+@import '../../node_modules/swiper/swiper-bundle.min.css';
+
 // Bootstrap Custom.scss
 
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
@@ -41,11 +44,16 @@
 @import '../../node_modules/bootstrap/scss/nav';
 @import '../../node_modules/bootstrap/scss/dropdown';
 @import '../../node_modules/bootstrap/scss/transitions';
+@import '../../node_modules/bootstrap/scss/helpers/position';
+@import '../../node_modules/bootstrap/scss/accordion';
 
 // custom helpers
 @import './utils/base';
 @import './utils/cus-maps';
+@import './mixins/bg-gradient';
+@import './mixins/cus_breakpoint';
 @import './utils/cus-utilities';
+@import './utils/cus-variables';
 
 // layout
 @import './layout/header.scss';

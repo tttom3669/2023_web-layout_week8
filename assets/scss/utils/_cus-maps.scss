@@ -1,15 +1,46 @@
 $cus-font-family: (
-  'noto-sans-tc': ('Noto Sans TC',sans-serif),
-  'shrikhand': ('Shrikhand', cursive),
-  'saira-condensed': ('Saira Extra Condensed',sans-serif),
+  'noto-sans-tc': (
+    'Noto Sans TC',
+    sans-serif,
+  ),
+  'shrikhand': (
+    'Shrikhand',
+    cursive,
+  ),
+  'saira-condensed': (
+    'Saira Extra Condensed',
+    sans-serif,
+  ),
 );
 
 $spec-colors: (
-  spec-linear-priToSec: linear-gradient(180deg, #7000FF 0%, #11002D 100%),
-  spec-radial:
-    radial-gradient(50% 50% at 50% 50%, #28085c 0%, rgba(0, 0, 0, 0) 100%),
+  spec-linear-priToSec: linear-gradient(180deg, #7000ff 0%, #11002d 100%),
+  spec-radial: radial-gradient(50% 50% at 50% 50%, #28085c 0%, #000 100%),
+  spec-radial-reverse:
+    radial-gradient(50% 50% at 50% 50%, #000 0%, #28085c 100%),
+);
+$cus-spacers: (1px, 18px, 36px,40px, 54px,60px,64px, 80px,120px, 136px,260px);
+
+$cus-letter-spacing: (
+  1: 1.6px,
+  2: 4.8px,
+  3: 16px,
+  4: 20px,
+  5: 24px,
+  6: 32px,
+  7: 40px,
+  8: 48px,
+  9: 80px,
+  10: 320px,
+  11: 1000px,
 );
 
-$cus-spacers:(
-   1px,
+$cus-bg-size: (contain, cover);
+
+$cus-breakpoints: (
+  sm: 375px,
+  md: 768px,
+  lg: 992px,
+  xl:1200px,
+  xxl:1400px,
 );

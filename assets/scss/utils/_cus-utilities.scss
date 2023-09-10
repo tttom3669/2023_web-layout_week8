@@ -1,16 +1,110 @@
-@each $key,$value in $cus-font-family{
-    .font-#{$key}{
-        font-family: $value !important;
-    }
+@each $key, $value in $cus-font-family {
+  .font-#{$key} {
+    font-family: $value !important;
+  }
 }
 
-@each $key,$value in $spec-colors{
-    .bg-#{$key}{
-        background-image: $value;
-    }
+@each $key, $value in $spec-colors {
+  .bg-#{$key} {
+    background-image: $value;
+  }
 }
-@each $value in $cus-spacers{
-    .mt-#{$value}{
+@each $value in $cus-spacers {
+  .mt-#{$value} {
+    margin-top: $value;
+  }
+  .mb-#{$value} {
+    margin-bottom: $value;
+  }
+  .pt-#{$value} {
+    padding-top: $value;
+  }
+  .pb-#{$value} {
+    padding-bottom: $value;
+  }
+}
+
+@each $bp-key, $bp-val in $cus-breakpoints {
+  @media (min-width: $bp-val) {
+    @each $value in $cus-spacers {
+      .mt-#{$bp-key}-#{$value} {
         margin-top: $value;
+      }
+      .mb-#{$bp-key}-#{$value} {
+        margin-bottom: $value;
+      }
+      .pt-#{$bp-key}-#{$value} {
+        padding-top: $value;
+      }
+      .pb-#{$bp-key}-#{$value} {
+        padding-bottom: $value;
+      }
     }
+  }
+}
+
+@each $key, $value in $cus-letter-spacing {
+  .ls-#{$key} {
+    letter-spacing: $value;
+  }
+}
+
+@each $bp-key, $bp-val in $cus-breakpoints {
+  @media (min-width: $bp-val) {
+    @each $key, $value in $cus-letter-spacing {
+      .ls-#{$bp-key}-#{$key} {
+        letter-spacing: $value;
+      }
+    }
+  }
+}
+
+@each $value in $cus-bg-size {
+  .bg-size-#{$value} {
+    background-size: $value;
+  }
+}
+
+@each $bp-key, $bp-val in $cus-breakpoints {
+  @media (min-width: $bp-val) {
+    @each $value in $cus-bg-size {
+      .bg-size-#{$bp-key}-#{$value} {
+        background-size: $value;
+      }
+    }
+  }
+}
+
+.bg-position-bottom {
+  background-position: bottom;
+}
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
+.bg-spec-bar-1 {
+  @include gradient-x(#7000ff 1.22%, #11002d 116.05%);
+}
+.bg-spec-bar-2 {
+  @include gradient-x(#11002d 1.22%, #7000ff 116.05%);
+}
+
+.word-break-all {
+  word-break: break-all;
+}
+
+.text-bgWord {
+  color: rgba(255, 255, 255, 0.04);
+  bottom: 0;
+  left: 0;
+  margin-bottom: -15%;
+  margin-left: -55%;
+  @include sm {
+    margin-bottom: -13%;
+    margin-left: -20%;
+  }
+}
+
+.translateY-8{
+ transform: translateY(8%);   
 }
